@@ -15,3 +15,14 @@ spec:
       containers:
       - name: myapp
         image: <AWS_ACCOUNT_ID>.dkr.ecr.<region>.amazonaws.com/myapp:v1
+        env:
+        - name: DB_HOST
+          value: "my-database"
+        - name: DB_USER
+          value: "admin"
+        - name: DB_PASSWORD
+          value: "password123"
+        - name: DB_NAME
+          value: "myappdb"
+        ports:
+        - containerPort: 5000
