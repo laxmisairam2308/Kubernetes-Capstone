@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: <AWS_ACCOUNT_ID>.dkr.ecr.<region>.amazonaws.com/myapp:v2
+        image: 818471591518.dkr.ecr.us-east-1.amazonaws.com/myapp:v2
         env:
         - name: DB_HOST
           value: "my-database"
