@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-green
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp-green
+  template:
+    metadata:
+      labels:
+        app: myapp-green
+    spec:
+      containers:
+      - name: myapp
+        image: <AWS_ACCOUNT_ID>.dkr.ecr.<region>.amazonaws.com/myapp:v2
