@@ -1,0 +1,9 @@
+database:
+  host: "my-database"
+  user: "admin"
+  password: "password123"
+  name: "myappdb"
+
+app:
+  port: 5000
+  debug: true
