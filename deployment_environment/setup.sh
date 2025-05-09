@@ -3,7 +3,12 @@
 sudo apt update && sudo apt upgrade -y
 
 # Install required tools
-sudo apt install -y docker.io kubectl awscli eksctl
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_Linux_amd64.tar.gz" | tar xz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin/
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y docker.io
+sudo snap install kubectl --classic
+sudo snap install aws-cli --classic
 
 # Start and enable Docker
 sudo systemctl start docker
